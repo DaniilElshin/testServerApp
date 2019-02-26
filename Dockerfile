@@ -4,7 +4,7 @@ LABEL Simen Huuse - itelligence / NTT Data // Thanks to Alex Bordei - Bigstep In
 
 run apk add --update darkhttpd && rm -rf /var/cache/apk/*
 
-ADD index.html /var/www/localhost/htdocs/index.html
+ADD index.php /var/www/localhost/htdocs/index.php
 ADD entrypoint.sh /entrypoint.sh
 
 EXPOSE 80
