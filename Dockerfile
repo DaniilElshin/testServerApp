@@ -4,9 +4,10 @@ run apk add --update darkhttpd && rm -rf /var/cache/apk/*
 
 ADD linuxTest_Data /linuxTest_Data
 ADD linuxTest.x86_64 /linuxTest.x86_64
+ADD output.log /var/www/localhost/htdocs/output.log
 
-CMD /linuxTest.x86_64 -logfile output.log & \
-	tail -f output.log
+CMD /linuxTest.x86_64 -logfile /var/www/localhost/htdocs/output.log & \
+	tail -f /var/www/localhost/htdocs/output.log
 
 ADD entrypoint.sh /entrypoint.sh
 
